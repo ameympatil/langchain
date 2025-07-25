@@ -8,6 +8,7 @@ import os
 
 load_dotenv()
 
+
 def get_gemini_model():
     model = ChatGoogleGenerativeAI(
         google_api_key=os.getenv("GOOGLE_API_KEY"),
@@ -16,11 +17,14 @@ def get_gemini_model():
     )
     return model
 
+
 model = get_gemini_model()
 
 messages = [
-    SystemMessage(content="You are a helpful assistant that can answer questions and help with tasks."),
-    HumanMessage(content="Tell me about langchain in one line")
+    SystemMessage(
+        content="You are a helpful assistant that can answer questions and help with tasks."
+    ),
+    HumanMessage(content="Tell me about langchain in one line"),
 ]
 
 result = model.invoke(messages)

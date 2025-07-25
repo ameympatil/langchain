@@ -9,6 +9,9 @@ openai
 # Anthropic Integration
 langchain-anthropic
 
+#Groq Model
+langchain-groq
+
 # Google Gemini (PaLM) Integration
 langchain-google-genai
 google-generativeai
@@ -27,3 +30,6 @@ scikit-learn
 
 # Streamlit
 streamlit
+
+#Pydantic
+pydantic

@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.messages import HumanMessage,AIMessage,SystemMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
 
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -9,6 +9,7 @@ import os
 
 load_dotenv()
 
+
 def get_gemini_model():
     model = ChatGoogleGenerativeAI(
         google_api_key=os.getenv("GOOGLE_API_KEY"),
@@ -17,10 +18,15 @@ def get_gemini_model():
     )
     return model
 
+
 model = get_gemini_model()
 
 chat_history = []
-chat_history.append(SystemMessage(content="Try to answer the question as best as you can and keep it simple and short."))
+chat_history.append(
+    SystemMessage(
+        content="Try to answer the question as best as you can and keep it simple and short."
+    )
+)
 
 
 while True:
