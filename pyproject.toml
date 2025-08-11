@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "grandalf>=0.8",
+    "langchain-community",
     "pydantic[email]>=2.11.7",
 ]
